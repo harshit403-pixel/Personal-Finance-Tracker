@@ -1,7 +1,7 @@
 // =====================================================
 // API BASE URL
 // =====================================================
-const API_URL = "https://personal-finance-tracker-o79e.onrender.com";
+const API_URL = "https://personal-finance-tracker-o79e.onrender.com/api";
 
 
 // =====================================================

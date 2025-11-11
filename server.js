@@ -33,11 +33,25 @@ app.use(cors({
 // =============================
 // MongoDB Connection
 // =============================
-const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/personalFinanceDB";
+// =============================
+// MongoDB Connection (Render + Atlas Ready)
+// =============================
+const mongoURI = process.env.MONGO_URI;
 
-mongoose.connect(mongoURI)
+if (!mongoURI) {
+  console.error("❌ MONGO_URI not found in environment variables!");
+  process.exit(1);
+}
+
+mongoose.connect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => console.log("✅ MongoDB connected successfully"))
-  .catch((err) => console.error("❌ DB connection error:", err));
+  .catch((err) => {
+    console.error("❌ MongoDB connection failed:", err.message);
+    process.exit(1);
+  });
 
 // =============================
 // JWT Verification Middleware
