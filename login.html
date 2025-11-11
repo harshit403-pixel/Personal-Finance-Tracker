@@ -221,7 +221,7 @@
     const password = document.getElementById("password").value.trim();
 
     if (!email || !password) {
-      alert("Please enter both email and password.");
+    showToast("⚠️ Please enter both email and password.", "error")
       return;
     }
 
@@ -255,11 +255,11 @@
           window.location.href = "dashboard.html";
         }, 3500);
       } else {
-        alert(data.message || "Invalid email or password.");
+      showToast(data.message || "❌ Invalid email or password.", "error");
       }
     } catch (error) {
       console.error("Login failed:", error);
-      alert("Server error. Please try again later.");
+    showToast("❌ Server error. Please try again later.", "error");
     }
   });
 </script>
