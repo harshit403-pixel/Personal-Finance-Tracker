@@ -1,7 +1,8 @@
 // =====================================================
 // API BASE URL
 // =====================================================
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://finance-tracker-backend.onrender.com";
+
 
 // =====================================================
 // GET USER & TOKEN FROM LOCALSTORAGE
