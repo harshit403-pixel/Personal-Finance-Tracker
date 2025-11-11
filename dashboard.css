@@ -1,0 +1,235 @@
+/* Import main styles if needed */
+@import url('style.css');
+
+/* General layout */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 15px 30px;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #38bdf8;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* Main content */
+main {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Section box */
+.section-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.head-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #111;
+}
+
+.under-head-text {
+  width: 60px;
+  height: 3px;
+  background: #38bdf8;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Tracker Section */
+.tracker-part {
+  margin-top: 20px;
+}
+
+.tracker-balance {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* Filters */
+.currency-filter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.currency-filter select,
+.currency-filter input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Transaction Form */
+.transaction-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.transaction-form input,
+.transaction-form select,
+.transaction-form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.transaction-form button {
+  background: #38bdf8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.transaction-form button:hover {
+  background: #0ea5e9;
+}
+
+/* Table */
+.table-part table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-part th,
+.table-part td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px;
+  text-align: left;
+}
+
+.table-part th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  border-top: 3px solid #38bdf8;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .user-info {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .transaction-form {
+    flex-direction: column;
+  }
+
+  .currency-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .head-text h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .transaction-form input,
+  .transaction-form select,
+  .transaction-form button {
+    width: 100%;
+  }
+
+  .table-part th,
+  .table-part td {
+    font-size: 0.85rem;
+  }
+}
