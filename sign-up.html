@@ -243,11 +243,12 @@
     const password = document.getElementById('password').value;
 
     try {
-      const res = await fetch('http://localhost:5000/api/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, email, password })
-      });
+const res = await fetch('https://personal-finance-tracker-o79e.onrender.com/api/signup', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ username, email, password })
+});
+
 
       const data = await res.json();
       alert(data.message);
