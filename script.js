@@ -126,7 +126,8 @@ async function addTransaction() {
       document.getElementById("date").value = "";
       document.getElementById("categorySelect").value = "";
 
-      alert("✅ Transaction added successfully!");
+showToast("✅ Transaction added successfully!", "success");
+
     } else {
       const error = await response.json();
       alert(`❌ Error: ${error.message}`);
